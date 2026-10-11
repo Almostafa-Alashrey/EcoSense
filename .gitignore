@@ -1,0 +1,8 @@
+ecosense.log
+factory_clean.csv
+experiments.py
+train_demo.py
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
