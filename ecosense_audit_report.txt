@@ -1,0 +1,111 @@
+ECOSENSE PROJECT AUDIT
+Date: 2026-10-15T03:09:53
+Project: C:\SHAMS YASSER\shams yasser
+Python: 3.15.0 (tags/v3.15.0:d220409, Oct  9 2026, 11:55:56) [MSC v.1951 64 bit (AMD64)]
+
+============================================================
+PROJECT FILES
+Status: PASS
+.env
+.gitignore
+.pytest_cache\.gitignore
+.pytest_cache\CACHEDIR.TAG
+.pytest_cache\README.md
+.pytest_cache\v\cache\lastfailed
+.pytest_cache\v\cache\nodeids
+audit_project.py
+auth_models.py
+batch1.zip
+batch2.zip
+batch3.zip
+config.py
+cost
+database.py
+deps.py
+ecosense copy.db
+ecosense.db
+ecosense.db.backup
+env (1).example
+gitignore (2)
+main.cpython-38.pyc
+main.py
+models.py
+project_tree.txt
+requirements.txt
+routers\.waste.py
+routers\__init__.py
+routers\auth.py
+routers\simulation.py
+routers\waste.py
+schemas_auth.py
+schemas_waste.py
+security.py
+seed_waste_history.py
+services\cost_service.py
+services\simulation_service.py
+services\waste_service.py
+tests\conftest.py
+tests\test_auth.py
+tests\test_cost_service.py
+tests\test_simulation_service.py
+tests\test_waste_route.py
+
+
+============================================================
+PYTHON SYNTAX
+Status: CHECK
+tests\test_waste_route.py: invalid non-printable character U+FEFF (test_waste_route.py, line 1)
+
+
+============================================================
+DEPENDENCY CHECK
+Status: PASS
+No broken requirements found.
+
+
+============================================================
+AUTOMATED TESTS
+Status: PASS
+============================= test session starts =============================
+platform win32 -- Python 3.15.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\serry\AppData\Local\Python\pythoncore-3.15-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\SHAMS YASSER\shams yasser
+plugins: anyio-4.15.1
+collecting ... collected 14 items
+
+tests/test_auth.py::test_register_company PASSED                         [  7%]
+tests/test_auth.py::test_duplicate_email_rejected PASSED                 [ 14%]
+tests/test_auth.py::test_login_and_get_account PASSED                    [ 21%]
+tests/test_auth.py::test_wrong_password_rejected PASSED                  [ 28%]
+tests/test_auth.py::test_invalid_token_rejected PASSED                   [ 35%]
+tests/test_cost_service.py::test_costs_use_provided_prices PASSED        [ 42%]
+tests/test_cost_service.py::test_missing_price_is_reported_not_guessed PASSED [ 50%]
+tests/test_cost_service.py::test_negative_values_rejected PASSED         [ 57%]
+tests/test_cost_service.py::test_simulation_math PASSED                  [ 64%]
+tests/test_cost_service.py::test_simulation_rejects_bad_percent PASSED   [ 71%]
+tests/test_simulation_service.py::test_calculates_savings_and_payback PASSED [ 78%]
+tests/test_simulation_service.py::test_zero_savings_has_no_payback_period PASSED [ 85%]
+tests/test_simulation_service.py::test_invalid_period_type_is_rejected PASSED [ 92%]
+tests/test_waste_route.py::test_waste_uses_matching_period_and_company PASSED [100%]
+
+============================= 14 passed in 2.35s ==============================
+
+
+============================================================
+APPLICATION IMPORT AND API ROUTES
+Status: PASS
+Application title: EcoSense API
+Application version: 0.4.0
+Routes:
+GET,HEAD /openapi.json
+GET,HEAD /docs
+GET,HEAD /docs/oauth2-redirect
+GET,HEAD /redoc
+GET /
+POST /analyze
+
+
+============================================================
+GIT STATUS
+Status: PASS
+No .git folder found; Git status skipped.
